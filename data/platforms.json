@@ -1,0 +1,155 @@
+{
+  "verifiedOn": "2026-10-06",
+  "language": "id-ID",
+  "policy": "Gunakan fakta halaman Microsoft Support/Learn; daftar Applies To saja tidak cukup untuk menyimpulkan dukungan. Tampilkan tanggal verifikasi, versi minimum, lisensi, dan alternatif bila fitur tidak tersedia.",
+  "sources": [
+    {
+      "id": "power-query-mac",
+      "title": "Import and shape data in Excel for Mac (Power Query)",
+      "url": "https://support.microsoft.com/en-gb/excel/import-and-shape-data-in-excel-for-mac-power-query",
+      "facts": [
+        "Power Query Editor tersedia umum bagi pelanggan Microsoft 365 pada Excel for Mac versi 16.69 (23010700) atau lebih baru.",
+        "Akses editor melalui Data > Get Data (Power Query) > Launch Power Query Editor.",
+        "Dukungan connector berbeda. Halaman saat diverifikasi membatasi impor SQL Server Database ke Insiders Beta."
+      ],
+      "editorialNote": "Halaman yang sama masih memuat paragraf lama 'authoring ... not available' pada bagian VBA. Untuk dukungan editor saat ini gunakan bagian 'Shape data with Power Query Editor' yang menyebut 16.69, bukan paragraf legacy. Jangan menulis Mac tidak memiliki Power Query."
+    },
+    {
+      "id": "power-query-connectors",
+      "title": "Power Query data sources in Excel versions",
+      "url": "https://support.microsoft.com/en-us/excel/power-query-data-sources-in-excel-versions",
+      "facts": [
+        "Excel Windows 2016 dan lebih baru serta Microsoft 365 menyediakan Power Query; kemampuan tergantung versi dan paket.",
+        "Tabel Mac membedakan import dan refresh. Text/CSV, Excel Workbook, XML, JSON, SharePoint List, OData, Blank Query dan Blank Table tercantum untuk import dan refresh; beberapa connector hanya refresh.",
+        "Power Query tidak didukung Excel Android/iOS."
+      ],
+      "implementationGuidance": "Latihan lintas platform sebaiknya menggunakan CSV/XLSX lokal dengan langkah memperbarui path file, serta menyediakan data bersih sebagai fallback. Jangan mengasumsikan seluruh connector Windows tersedia pada Mac."
+    },
+    {
+      "id": "power-query-web",
+      "title": "Use Power Query in Excel for the Web",
+      "url": "https://support.microsoft.com/en-us/excel/use-power-query-in-excel-for-the-web",
+      "facts": [
+        "Melihat dan refresh query tersedia bagi semua pelanggan Microsoft 365; fungsi tambahan memerlukan Business atau Enterprise E3 ke atas menurut halaman saat diverifikasi.",
+        "Excel Web mendukung impor, editor transformasi, dan load ke grid; menu Data > Get Data > Launch Power Query Editor.",
+        "Sebagian fungsi memerlukan third-party cookies."
+      ],
+      "implementationGuidance": "Jangan memakai klaim lama bahwa Power Query tidak tersedia pada Web. Tampilkan syarat plan dan connector."
+    },
+    {
+      "id": "data-model-mac",
+      "title": "Use multiple tables to create a PivotTable in Excel",
+      "url": "https://support.microsoft.com/en-us/excel/use-multiple-tables-to-create-a-pivottable-in-excel",
+      "facts": ["Dokumentasi secara eksplisit menyatakan Data Models tidak didukung Excel for Mac."],
+      "implementationGuidance": "Pisahkan PivotTable biasa dari Power Pivot/Data Model/DAX. Untuk Mac, latihan inti memakai satu tabel yang dirapikan atau digabung lebih dulu; jalur Data Model diberi label memerlukan Windows yang mendukung."
+    },
+    {
+      "id": "analytics-platforms",
+      "title": "Learn to use Power Query and Power Pivot in Excel",
+      "url": "https://support.microsoft.com/en-us/excel/learn-to-use-power-query-and-power-pivot-in-excel",
+      "facts": [
+        "Microsoft menyebut Excel Windows pada Microsoft 365 Apps for enterprise menyediakan kemampuan Power Query dan Power Pivot lengkap.",
+        "Excel Mac mendukung PivotTables, slicers, charts, import dasar, dan sebagian Power Query."
+      ],
+      "editorialNote": "Tautan lama 'Where is Power Pivot?' kini redirect ke halaman ringkasan yang tidak lagi memuat tabel platform. Pakai sumber Data Model Mac untuk batasan eksplisit."
+    },
+    {
+      "id": "vba-mac",
+      "title": "Office for Mac for Visual Basic for Applications (VBA)",
+      "url": "https://learn.microsoft.com/en-us/office/vba/api/overview/office-mac",
+      "facts": [
+        "Excel for Mac mendukung VBA dan sebagian besar objek VBA Office.",
+        "Sandbox Mac memengaruhi akses file dan komunikasi antarproses; tersedia GrantAccessToMultipleFiles dan AppleScriptTask.",
+        "Dokumentasi tidak mendukung third-party COM add-ins di Office Mac."
+      ],
+      "implementationGuidance": "Contoh VBA inti cukup mengubah workbook, hindari COM/ActiveX/Windows API. Beri instruksi .xlsm dan izin macro secara terpisah; jangan mensyaratkan macro untuk latihan dasar."
+    },
+    {
+      "id": "vba-web",
+      "title": "Work with VBA macros in Excel for the web",
+      "url": "https://support.microsoft.com/en-us/excel/work-with-vba-macros-in-excel-for-the-web",
+      "facts": ["Excel Web tidak dapat membuat, menjalankan, atau mengedit VBA. Workbook berisi macro dapat dibuka/diedit dan macro dipertahankan; pengelolaan macro menggunakan Excel desktop."],
+      "implementationGuidance": "Label latihan VBA desktop-only; sediakan konsep atau contoh kode yang dapat dipelajari di Web tanpa menjanjikan eksekusi."
+    },
+    {
+      "id": "office-scripts",
+      "title": "Platform limits and requirements with Office Scripts",
+      "url": "https://learn.microsoft.com/en-us/office/dev/scripts/testing/platform-limits",
+      "facts": [
+        "Office Scripts mendukung Excel Web, Windows versi 2210 atau lebih baru, dan Mac, dengan lisensi/lingkungan yang memenuhi syarat.",
+        "Business/education memerlukan lisensi yang didukung, OneDrive for Business, koneksi internet dan connected experiences.",
+        "Personal/Family masih dinyatakan preview dan memerlukan Microsoft 365 Insider pada halaman yang diverifikasi.",
+        "Admin dapat menonaktifkan fitur. API baru mungkin tidak tersedia pada build desktop lama; Power Automate memerlukan business license."
+      ],
+      "implementationGuidance": "Jadikan jalur opsional dengan pemeriksaan ketersediaan tab Automate, jangan menjanjikan tersedia pada semua akun."
+    },
+    {
+      "id": "xlookup",
+      "title": "XLOOKUP function",
+      "url": "https://support.microsoft.com/en-us/excel/functions/xlookup-function",
+      "facts": [
+        "XLOOKUP tidak tersedia di Excel 2016/2019 walaupun keduanya muncul dalam Applies To.",
+        "XLOOKUP mencari exact match secara default; lookup_array dan return_array dapat berada pada sisi mana pun.",
+        "Dokumentasi mencakup Microsoft 365 serta Excel 2021/2024 pada Windows dan Mac."
+      ],
+      "implementationGuidance": "Sediakan alternatif INDEX/MATCH atau VLOOKUP dengan FALSE untuk pengguna versi lama."
+    },
+    {
+      "id": "excel2021-mac",
+      "title": "What's new in Excel 2021 for Mac",
+      "url": "https://support.microsoft.com/en-us/excel/what-s-new-in-excel-2021-for-mac",
+      "facts": ["Excel 2021 Mac memiliki XLOOKUP, LET, XMATCH, serta dynamic-array functions FILTER, SORT, SORTBY, UNIQUE, SEQUENCE, RANDARRAY."],
+      "implementationGuidance": "Pisahkan kelompok fitur 2021+ dari LAMBDA dan fungsi baru lain; jangan melabel semua formula modern Microsoft 365-only."
+    },
+    {
+      "id": "let",
+      "title": "LET function",
+      "url": "https://support.microsoft.com/en-gb/excel/functions/let-function?nochrome=true",
+      "facts": ["LET menyimpan nama/nilai intermediate di dalam scope formula. Halaman mencakup Microsoft 365 serta Excel 2021/2024 Windows dan Mac."]
+    },
+    {
+      "id": "lambda",
+      "title": "LAMBDA function",
+      "url": "https://support.microsoft.com/en-us/excel/functions/lambda-function",
+      "facts": [
+        "LAMBDA membentuk fungsi reusable tanpa VBA atau JavaScript. Desktop yang tercantum: Microsoft 365 dan Excel 2024 Windows/Mac; Excel 2021 tidak tercantum.",
+        "Definisi nama: Windows melalui Formulas > Name Manager; Mac melalui Formulas > Define Name menurut petunjuk halaman."
+      ],
+      "implementationGuidance": "Jangan memasukkan LAMBDA ke kompatibilitas Excel 2021. Periksa menu/build saat praktik."
+    },
+    {
+      "id": "filter",
+      "title": "FILTER function",
+      "url": "https://support.microsoft.com/en-us/excel/functions/filter-function",
+      "facts": [
+        "FILTER menghasilkan dynamic array yang spill; if_empty mencegah #CALC! saat hasil kosong.",
+        "Referensi dynamic array antar-workbook hanya didukung ketika kedua workbook terbuka; sumber tertutup dapat menghasilkan #REF! setelah refresh."
+      ],
+      "implementationGuidance": "Gunakan dataset dalam workbook yang sama untuk latihan portabel."
+    },
+    {
+      "id": "arrays-web",
+      "title": "Create an array formula in Excel",
+      "url": "https://support.microsoft.com/en-us/excel/create-an-array-formula-in-excel",
+      "facts": ["Excel Web mendukung dynamic array formulas; tidak dapat membuat legacy array formulas memakai Ctrl+Shift+Enter. Formula legacy yang sudah ada dapat dilihat."]
+    },
+    {
+      "id": "shortcuts",
+      "title": "Keyboard shortcuts in Excel",
+      "url": "https://support.microsoft.com/en-us/accessibility/excel/keyboard-shortcuts-in-excel",
+      "facts": [
+        "Tabel resmi menggunakan US keyboard layout. Shortcut dapat bentrok dengan sistem macOS; beberapa function key memerlukan Fn sesuai pengaturan.",
+        "Tidak semua shortcut Windows menjadi Cmd pada Mac. Website harus menyimpan shortcut per platform.",
+        "Mac: Save Cmd+S; Format Cells Cmd+1; Edit cell Ctrl+U; cycle reference Cmd+T atau F4; AutoSum Shift+Cmd+T; Filter Cmd+Shift+F atau Ctrl+Shift+L; Visual Basic Option+F11.",
+        "Windows: Save Ctrl+S; Format Cells Ctrl+1; Edit cell F2; cycle reference F4; AutoSum Alt+=; Visual Basic Alt+F11.",
+        "Excel Web berbagi shortcut dengan browser; access keys di Web pada Mac dimulai Control+Option."
+      ]
+    },
+    {
+      "id": "excel-addins",
+      "title": "Build Excel add-ins with Office Add-ins",
+      "url": "https://learn.microsoft.com/en-us/office/dev/add-ins/excel/excel-add-ins-overview",
+      "implementationGuidance": "Office Add-in adalah jalur integrasi workbook melalui Excel JavaScript API. Sebuah website pembelajaran biasa tidak otomatis memperoleh akses ke workbook desktop aktif; alur awal gunakan download workbook, latihan di Excel, lalu unggah file untuk diperiksa. Integrasi Add-in membutuhkan proyek, manifest, izin, dukungan requirement set dan pengujian tersendiri. Ini implikasi arsitektur, bukan fitur yang sudah dibuat."
+    }
+  ]
+}

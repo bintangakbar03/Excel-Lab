@@ -1,0 +1,2240 @@
+[
+  {
+    "id": "SUM",
+    "name": "SUM",
+    "category": "Matematika & statistik",
+    "purpose": "Menjumlahkan angka dari satu atau beberapa rentang.",
+    "syntax": "=SUM(number1, [number2], ...)",
+    "parameters": [
+      {
+        "name": "number1",
+        "description": "Angka, referensi, atau rentang pertama."
+      },
+      {
+        "name": "[number2], ...",
+        "description": "Angka atau rentang tambahan; opsional."
+      }
+    ],
+    "example": "=SUM(125000,75000,50000)",
+    "result": "250000",
+    "realWorld": "Total penjualan dari seluruh transaksi.",
+    "mistakes": [
+      "SUM pada rentang mengabaikan teks; angka yang tersimpan sebagai teks dapat membuat total terlalu kecil.",
+      "Baris yang disembunyikan atau difilter tetap dijumlahkan."
+    ],
+    "alternatives": [
+      "SUBTOTAL untuk baris terlihat",
+      "SUMIFS untuk total bersyarat"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "SUM function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/sum-function"
+    }
+  },
+  {
+    "id": "AVERAGE",
+    "name": "AVERAGE",
+    "category": "Matematika & statistik",
+    "purpose": "Menghitung rata-rata aritmetika angka.",
+    "syntax": "=AVERAGE(number1, [number2], ...)",
+    "parameters": [
+      {
+        "name": "number1",
+        "description": "Angka atau rentang yang dirata-ratakan."
+      },
+      {
+        "name": "[number2], ...",
+        "description": "Angka/rentang tambahan; opsional."
+      }
+    ],
+    "example": "=AVERAGE(70,80,90)",
+    "result": "80",
+    "realWorld": "Rata-rata nilai evaluasi atau penjualan harian.",
+    "mistakes": [
+      "Sel kosong dan teks dalam rentang diabaikan, tetapi angka 0 ikut dihitung.",
+      "Jika tidak ada angka, hasilnya #DIV/0!."
+    ],
+    "alternatives": [
+      "AVERAGEIF",
+      "AVERAGEIFS",
+      "SUMPRODUCT untuk rata-rata berbobot"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "AVERAGE function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/average-function"
+    }
+  },
+  {
+    "id": "MIN",
+    "name": "MIN",
+    "category": "Matematika & statistik",
+    "purpose": "Mengambil angka terkecil.",
+    "syntax": "=MIN(number1, [number2], ...)",
+    "parameters": [
+      {
+        "name": "number1",
+        "description": "Angka atau rentang yang dibandingkan."
+      },
+      {
+        "name": "[number2], ...",
+        "description": "Angka/rentang tambahan; opsional."
+      }
+    ],
+    "example": "=MIN(125,80,210)",
+    "result": "80",
+    "realWorld": "Mencari harga termurah di daftar penawaran.",
+    "mistakes": [
+      "Sel kosong dalam rentang diabaikan; angka 0 tetap kandidat minimum.",
+      "Jika argumen tidak memuat angka, MIN menghasilkan 0."
+    ],
+    "alternatives": [
+      "MINIFS untuk minimum bersyarat",
+      "SMALL untuk nilai terkecil ke-n"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "MIN function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/min-function"
+    }
+  },
+  {
+    "id": "MAX",
+    "name": "MAX",
+    "category": "Matematika & statistik",
+    "purpose": "Mengambil angka terbesar.",
+    "syntax": "=MAX(number1, [number2], ...)",
+    "parameters": [
+      {
+        "name": "number1",
+        "description": "Angka atau rentang yang dibandingkan."
+      },
+      {
+        "name": "[number2], ...",
+        "description": "Angka/rentang tambahan; opsional."
+      }
+    ],
+    "example": "=MAX(125,80,210)",
+    "result": "210",
+    "realWorld": "Mencari omzet transaksi terbesar.",
+    "mistakes": [
+      "Teks di rentang diabaikan meskipun tampak seperti angka.",
+      "MAX tidak mengembalikan nama atau ID baris pemilik nilai maksimum."
+    ],
+    "alternatives": [
+      "MAXIFS",
+      "LARGE",
+      "XLOOKUP untuk mengambil ID terkait"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "MAX function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/max-function"
+    }
+  },
+  {
+    "id": "COUNT",
+    "name": "COUNT",
+    "category": "Matematika & statistik",
+    "purpose": "Menghitung sel yang berisi angka, termasuk tanggal Excel yang valid.",
+    "syntax": "=COUNT(value1, [value2], ...)",
+    "parameters": [
+      {
+        "name": "value1",
+        "description": "Nilai atau rentang pertama."
+      },
+      {
+        "name": "[value2], ...",
+        "description": "Nilai atau rentang tambahan; opsional."
+      }
+    ],
+    "example": "Isi A1=10, A2=20, A3=\"Lunas\", biarkan A4 kosong. Ketik =COUNT(A1:A4).",
+    "result": "2",
+    "realWorld": "Menghitung berapa nilai tes yang sudah berupa angka.",
+    "mistakes": [
+      "Dalam rentang, teks, nilai logika, error, dan sel kosong tidak dihitung.",
+      "Angka sebagai teks dalam sel diabaikan; teks angka/logika yang ditulis langsung sebagai argumen memiliki aturan berbeda."
+    ],
+    "alternatives": [
+      "COUNTA untuk isi apa pun",
+      "COUNTIF untuk syarat tertentu"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "COUNT function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/count-function"
+    }
+  },
+  {
+    "id": "COUNTA",
+    "name": "COUNTA",
+    "category": "Matematika & statistik",
+    "purpose": "Menghitung sel yang tidak benar-benar kosong.",
+    "syntax": "=COUNTA(value1, [value2], ...)",
+    "parameters": [
+      {
+        "name": "value1",
+        "description": "Nilai atau rentang yang diperiksa."
+      },
+      {
+        "name": "[value2], ...",
+        "description": "Nilai atau rentang tambahan; opsional."
+      }
+    ],
+    "example": "Isi A1=10, A2=\"Lunas\", A3 dengan formula =\"\"; biarkan A4 kosong. Ketik =COUNTA(A1:A4).",
+    "result": "3",
+    "realWorld": "Memeriksa kolom ID yang sudah terisi.",
+    "mistakes": [
+      "Formula yang menghasilkan teks kosong \"\" tetap dihitung.",
+      "Spasi, error, dan TRUE/FALSE ikut dihitung; hasil tidak selalu sama dengan jumlah sel yang tampak berisi."
+    ],
+    "alternatives": [
+      "COUNT",
+      "COUNTBLANK",
+      "COUNTIF"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "COUNTA function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/counta-function"
+    }
+  },
+  {
+    "id": "ROUND",
+    "name": "ROUND",
+    "category": "Matematika & statistik",
+    "purpose": "Membulatkan ke jumlah digit yang ditentukan.",
+    "syntax": "=ROUND(number, num_digits)",
+    "parameters": [
+      {
+        "name": "number",
+        "description": "Angka yang dibulatkan."
+      },
+      {
+        "name": "num_digits",
+        "description": "Digit desimal; 0 untuk integer, negatif untuk puluhan/ratusan."
+      }
+    ],
+    "example": "=ROUND(1234.567,2)",
+    "result": "1234.57",
+    "realWorld": "Membulatkan harga satuan hingga dua desimal.",
+    "mistakes": [
+      "Format tampilan dua desimal tidak mengubah nilai dasar; ROUND mengubah hasil perhitungan.",
+      "Pemisah desimal dapat berupa koma sesuai regional Excel."
+    ],
+    "alternatives": [
+      "ROUNDUP",
+      "ROUNDDOWN"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "ROUND function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/round-function"
+    }
+  },
+  {
+    "id": "ROUNDUP",
+    "name": "ROUNDUP",
+    "category": "Matematika & statistik",
+    "purpose": "Membulatkan menjauhi nol.",
+    "syntax": "=ROUNDUP(number, num_digits)",
+    "parameters": [
+      {
+        "name": "number",
+        "description": "Angka yang dibulatkan."
+      },
+      {
+        "name": "num_digits",
+        "description": "Jumlah digit desimal; 0 untuk integer."
+      }
+    ],
+    "example": "=ROUNDUP(10.21,0)",
+    "result": "11",
+    "realWorld": "Menghitung jumlah kemasan utuh untuk memenuhi kebutuhan.",
+    "mistakes": [
+      "Untuk bilangan negatif, menjauhi nol berarti lebih negatif: ROUNDUP(-2.1,0)=-3."
+    ],
+    "alternatives": [
+      "ROUND",
+      "CEILING.MATH untuk kelipatan tertentu"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "ROUNDUP function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/roundup-function"
+    }
+  },
+  {
+    "id": "ROUNDDOWN",
+    "name": "ROUNDDOWN",
+    "category": "Matematika & statistik",
+    "purpose": "Membulatkan mendekati nol.",
+    "syntax": "=ROUNDDOWN(number, num_digits)",
+    "parameters": [
+      {
+        "name": "number",
+        "description": "Angka yang dibulatkan."
+      },
+      {
+        "name": "num_digits",
+        "description": "Jumlah digit desimal; 0 untuk integer."
+      }
+    ],
+    "example": "=ROUNDDOWN(10.99,0)",
+    "result": "10",
+    "realWorld": "Menghitung paket lengkap yang dapat dibuat dari persediaan.",
+    "mistakes": [
+      "Pada angka negatif, berbeda dari INT: ROUNDDOWN(-2.9,0)=-2."
+    ],
+    "alternatives": [
+      "ROUND",
+      "TRUNC",
+      "INT"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "ROUNDDOWN function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/rounddown-function"
+    }
+  },
+  {
+    "id": "ABS",
+    "name": "ABS",
+    "category": "Matematika & statistik",
+    "purpose": "Mengambil nilai absolut tanpa tanda negatif.",
+    "syntax": "=ABS(number)",
+    "parameters": [
+      {
+        "name": "number",
+        "description": "Angka atau perhitungan numerik."
+      }
+    ],
+    "example": "=ABS(95-120)",
+    "result": "25",
+    "realWorld": "Mengukur besar selisih aktual terhadap target.",
+    "mistakes": [
+      "ABS menghilangkan arah selisih; simpan selisih asli jika perlu tahu surplus atau defisit."
+    ],
+    "alternatives": [
+      "IF untuk logika tanda khusus"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "ABS function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/abs-function"
+    }
+  },
+  {
+    "id": "MOD",
+    "name": "MOD",
+    "category": "Matematika & statistik",
+    "purpose": "Mengambil sisa pembagian.",
+    "syntax": "=MOD(number, divisor)",
+    "parameters": [
+      {
+        "name": "number",
+        "description": "Angka yang dibagi."
+      },
+      {
+        "name": "divisor",
+        "description": "Pembagi yang tidak boleh 0."
+      }
+    ],
+    "example": "=MOD(17,5)",
+    "result": "2",
+    "realWorld": "Membuat pola kelompok bergilir atau memeriksa genap/ganjil.",
+    "mistakes": [
+      "Pembagi 0 menghasilkan #DIV/0!.",
+      "Tanda hasil mengikuti tanda pembagi."
+    ],
+    "alternatives": [
+      "QUOTIENT untuk hasil bagi bulat",
+      "ISEVEN/ISODD"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "MOD function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/mod-function"
+    }
+  },
+  {
+    "id": "SUMPRODUCT",
+    "name": "SUMPRODUCT",
+    "category": "Matematika & statistik",
+    "purpose": "Mengalikan elemen yang sejajar lalu menjumlahkan hasilnya.",
+    "syntax": "=SUMPRODUCT(array1, [array2], ...)",
+    "parameters": [
+      {
+        "name": "array1",
+        "description": "Rentang atau array pertama."
+      },
+      {
+        "name": "[array2], ...",
+        "description": "Array tambahan dengan dimensi yang sama."
+      }
+    ],
+    "example": "=SUMPRODUCT({2,3,4},{10000,20000,15000})",
+    "result": "140000",
+    "realWorld": "Total kuantitas × harga tanpa kolom perkalian terpisah.",
+    "mistakes": [
+      "Dimensi array berbeda menghasilkan #VALUE!.",
+      "Hindari referensi satu kolom penuh pada data besar."
+    ],
+    "alternatives": [
+      "SUM pada kolom bantu",
+      "SUMIFS untuk agregasi bersyarat"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "SUMPRODUCT function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/sumproduct-function"
+    }
+  },
+  {
+    "id": "IF",
+    "name": "IF",
+    "category": "Logika & kondisi",
+    "purpose": "Memilih hasil berdasarkan satu pengujian logika.",
+    "syntax": "=IF(logical_test, value_if_true, [value_if_false])",
+    "parameters": [
+      {
+        "name": "logical_test",
+        "description": "Kondisi TRUE/FALSE."
+      },
+      {
+        "name": "value_if_true",
+        "description": "Hasil ketika benar."
+      },
+      {
+        "name": "[value_if_false]",
+        "description": "Hasil ketika salah; sebaiknya diisi eksplisit."
+      }
+    ],
+    "example": "=IF(82>=75,\"Lulus\",\"Ulang\")",
+    "result": "Lulus",
+    "realWorld": "Memberi status kelulusan atau pencapaian target.",
+    "mistakes": [
+      "Teks hasil harus diapit tanda kutip ganda.",
+      "Urutan kondisi pada IF bertingkat memengaruhi hasil."
+    ],
+    "alternatives": [
+      "IFS",
+      "XLOOKUP untuk tabel aturan"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "IF function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/if-function"
+    }
+  },
+  {
+    "id": "IFS",
+    "name": "IFS",
+    "category": "Logika & kondisi",
+    "purpose": "Mengambil hasil dari kondisi pertama yang TRUE.",
+    "syntax": "=IFS(logical_test1, value_if_true1, [logical_test2, value_if_true2], ...)",
+    "parameters": [
+      {
+        "name": "logical_test1",
+        "description": "Kondisi pertama."
+      },
+      {
+        "name": "value_if_true1",
+        "description": "Hasil untuk kondisi pertama."
+      },
+      {
+        "name": "[logical_test2, value_if_true2], ...",
+        "description": "Pasangan kondisi dan hasil berikutnya."
+      }
+    ],
+    "example": "=IFS(82>=90,\"A\",82>=75,\"B\",TRUE,\"C\")",
+    "result": "B",
+    "realWorld": "Mengelompokkan nilai ke tingkatan.",
+    "mistakes": [
+      "Letakkan ambang paling tinggi lebih dahulu dalam contoh ini.",
+      "Tanpa kondisi TRUE penutup, tidak ada kondisi terpenuhi menghasilkan #N/A."
+    ],
+    "alternatives": [
+      "IF bertingkat",
+      "XLOOKUP dengan tabel batas"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Microsoft 365 Windows/Mac dan Excel Web; Excel 2019, 2021, 2024 Windows/Mac. Tidak tersedia pada Excel 2016 perpetual.",
+    "source": {
+      "title": "IFS function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/ifs-function"
+    }
+  },
+  {
+    "id": "AND",
+    "name": "AND",
+    "category": "Logika & kondisi",
+    "purpose": "Bernilai TRUE jika semua kondisi terpenuhi.",
+    "syntax": "=AND(logical1, [logical2], ...)",
+    "parameters": [
+      {
+        "name": "logical1",
+        "description": "Pengujian pertama."
+      },
+      {
+        "name": "[logical2], ...",
+        "description": "Pengujian tambahan; semuanya harus benar."
+      }
+    ],
+    "example": "=AND(82>=75,90>=80)",
+    "result": "TRUE",
+    "realWorld": "Syarat kelulusan: nilai dan kehadiran memenuhi ambang.",
+    "mistakes": [
+      "Untuk memilih label teks, gunakan AND sebagai logical_test di IF.",
+      "AND pada rentang merangkum semuanya, bukan menghasilkan satu status per baris."
+    ],
+    "alternatives": [
+      "IF",
+      "Perkalian kondisi pada FILTER"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "AND function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/and-function"
+    }
+  },
+  {
+    "id": "OR",
+    "name": "OR",
+    "category": "Logika & kondisi",
+    "purpose": "Bernilai TRUE jika sedikitnya satu kondisi terpenuhi.",
+    "syntax": "=OR(logical1, [logical2], ...)",
+    "parameters": [
+      {
+        "name": "logical1",
+        "description": "Pengujian pertama."
+      },
+      {
+        "name": "[logical2], ...",
+        "description": "Pengujian tambahan; cukup salah satu benar."
+      }
+    ],
+    "example": "=OR(500000>=1000000,\"VIP\"=\"VIP\")",
+    "result": "TRUE",
+    "realWorld": "Diskon bagi pelanggan VIP atau pembelian di atas ambang.",
+    "mistakes": [
+      "OR berbeda dari AND; jangan gunakan jika semua syarat wajib terpenuhi."
+    ],
+    "alternatives": [
+      "AND",
+      "Penjumlahan kondisi pada FILTER"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "OR function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/or-function"
+    }
+  },
+  {
+    "id": "NOT",
+    "name": "NOT",
+    "category": "Logika & kondisi",
+    "purpose": "Membalik TRUE menjadi FALSE dan sebaliknya.",
+    "syntax": "=NOT(logical)",
+    "parameters": [
+      {
+        "name": "logical",
+        "description": "Nilai atau ekspresi logika."
+      }
+    ],
+    "example": "=NOT(5>10)",
+    "result": "TRUE",
+    "realWorld": "Menandai transaksi yang belum memenuhi kondisi.",
+    "mistakes": [
+      "NOT membalik satu hasil logika, bukan mengganti operator setiap bagian formula secara terpisah."
+    ],
+    "alternatives": [
+      "Operator <>",
+      "IF"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "NOT function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/not-function"
+    }
+  },
+  {
+    "id": "IFERROR",
+    "name": "IFERROR",
+    "category": "Logika & kondisi",
+    "purpose": "Mengganti hasil error dengan nilai yang ditentukan.",
+    "syntax": "=IFERROR(value, value_if_error)",
+    "parameters": [
+      {
+        "name": "value",
+        "description": "Formula atau nilai yang dievaluasi."
+      },
+      {
+        "name": "value_if_error",
+        "description": "Hasil pengganti bila terjadi error."
+      }
+    ],
+    "example": "=IFERROR(100/0,\"Periksa pembagi\")",
+    "result": "Periksa pembagi",
+    "realWorld": "Memberi pesan yang jelas ketika rasio tidak dapat dihitung.",
+    "mistakes": [
+      "IFERROR menangkap banyak jenis error; jangan menyembunyikan sumber masalah dengan angka 0 tanpa alasan."
+    ],
+    "alternatives": [
+      "IFNA jika hanya menangani #N/A",
+      "IF untuk memeriksa pembagi"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "IFERROR function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/iferror-function"
+    }
+  },
+  {
+    "id": "COUNTIF",
+    "name": "COUNTIF",
+    "category": "Logika & kondisi",
+    "purpose": "Menghitung sel yang memenuhi satu kriteria.",
+    "syntax": "=COUNTIF(range, criteria)",
+    "parameters": [
+      {
+        "name": "range",
+        "description": "Rentang yang diperiksa."
+      },
+      {
+        "name": "criteria",
+        "description": "Angka, teks, atau kondisi seperti \">=75\"."
+      }
+    ],
+    "example": "Isi A1:A4 dengan 60, 75, 80, 90. Ketik =COUNTIF(A1:A4,\">=75\").",
+    "result": "3",
+    "realWorld": "Menghitung peserta yang mencapai nilai minimum.",
+    "mistakes": [
+      "Operator kondisi ditulis di dalam tanda kutip; untuk sel B1 gunakan \">=\"&B1.",
+      "Teks tidak peka huruf besar/kecil; * dan ? merupakan wildcard."
+    ],
+    "alternatives": [
+      "COUNTIFS",
+      "SUMPRODUCT"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "Use the COUNTIF function in Microsoft Excel — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/get-started/use-the-countif-function-in-microsoft-excel"
+    }
+  },
+  {
+    "id": "COUNTIFS",
+    "name": "COUNTIFS",
+    "category": "Logika & kondisi",
+    "purpose": "Menghitung baris yang memenuhi seluruh pasangan kriteria.",
+    "syntax": "=COUNTIFS(criteria_range1, criteria1, [criteria_range2, criteria2], ...)",
+    "parameters": [
+      {
+        "name": "criteria_range1",
+        "description": "Rentang syarat pertama."
+      },
+      {
+        "name": "criteria1",
+        "description": "Syarat pertama."
+      },
+      {
+        "name": "[criteria_range2, criteria2], ...",
+        "description": "Rentang dan syarat tambahan dengan ukuran yang sama."
+      }
+    ],
+    "example": "A1:A3 = Jakarta, Bandung, Jakarta; B1:B3 = 80, 90, 60. Ketik =COUNTIFS(A1:A3,\"Jakarta\",B1:B3,\">=75\").",
+    "result": "1",
+    "realWorld": "Menghitung pelanggan wilayah tertentu yang lolos ambang.",
+    "mistakes": [
+      "Antarsyarat memakai AND.",
+      "Semua rentang harus memiliki ukuran yang sama."
+    ],
+    "alternatives": [
+      "COUNTIF",
+      "SUMPRODUCT untuk kondisi OR"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "COUNTIFS function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/countifs-function"
+    }
+  },
+  {
+    "id": "SUMIF",
+    "name": "SUMIF",
+    "category": "Logika & kondisi",
+    "purpose": "Menjumlahkan nilai yang memenuhi satu syarat.",
+    "syntax": "=SUMIF(range, criteria, [sum_range])",
+    "parameters": [
+      {
+        "name": "range",
+        "description": "Rentang tempat syarat diuji."
+      },
+      {
+        "name": "criteria",
+        "description": "Kondisi yang harus terpenuhi."
+      },
+      {
+        "name": "[sum_range]",
+        "description": "Rentang yang dijumlahkan; jika kosong memakai range."
+      }
+    ],
+    "example": "A1:A3 = Kopi, Teh, Kopi; B1:B3 = 100, 80, 150. Ketik =SUMIF(A1:A3,\"Kopi\",B1:B3).",
+    "result": "250",
+    "realWorld": "Total pendapatan dari satu produk.",
+    "mistakes": [
+      "Urutan parameter berbeda dari SUMIFS.",
+      "Gunakan rentang pemeriksaan dan penjumlahan yang sejajar."
+    ],
+    "alternatives": [
+      "SUMIFS",
+      "PivotTable"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "SUMIF function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/sumif-function"
+    }
+  },
+  {
+    "id": "SUMIFS",
+    "name": "SUMIFS",
+    "category": "Logika & kondisi",
+    "purpose": "Menjumlahkan nilai yang memenuhi semua kriteria.",
+    "syntax": "=SUMIFS(sum_range, criteria_range1, criteria1, [criteria_range2, criteria2], ...)",
+    "parameters": [
+      {
+        "name": "sum_range",
+        "description": "Rentang angka yang dijumlahkan."
+      },
+      {
+        "name": "criteria_range1",
+        "description": "Rentang syarat pertama."
+      },
+      {
+        "name": "criteria1",
+        "description": "Syarat pertama."
+      },
+      {
+        "name": "[criteria_range2, criteria2], ...",
+        "description": "Pasangan syarat berikutnya."
+      }
+    ],
+    "example": "A1:A3 = Kopi, Teh, Kopi; B1:B3 = Jakarta, Jakarta, Bandung; C1:C3 = 100, 80, 150. Ketik =SUMIFS(C1:C3,A1:A3,\"Kopi\",B1:B3,\"Jakarta\").",
+    "result": "100",
+    "realWorld": "Total penjualan produk tertentu di wilayah tertentu.",
+    "mistakes": [
+      "sum_range berada paling depan.",
+      "Syarat bekerja sebagai AND; ukuran semua rentang harus sama."
+    ],
+    "alternatives": [
+      "SUMIF",
+      "SUMPRODUCT",
+      "PivotTable"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "SUMIFS function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/sumifs-function"
+    }
+  },
+  {
+    "id": "AVERAGEIF",
+    "name": "AVERAGEIF",
+    "category": "Logika & kondisi",
+    "purpose": "Menghitung rata-rata nilai yang memenuhi satu syarat.",
+    "syntax": "=AVERAGEIF(range, criteria, [average_range])",
+    "parameters": [
+      {
+        "name": "range",
+        "description": "Rentang kriteria."
+      },
+      {
+        "name": "criteria",
+        "description": "Syarat yang dicari."
+      },
+      {
+        "name": "[average_range]",
+        "description": "Rentang angka; jika diabaikan memakai range."
+      }
+    ],
+    "example": "A1:A3 = Tim A, Tim B, Tim A; B1:B3 = 70, 90, 80. Ketik =AVERAGEIF(A1:A3,\"Tim A\",B1:B3).",
+    "result": "75",
+    "realWorld": "Rata-rata nilai satu tim.",
+    "mistakes": [
+      "Tidak ada nilai numerik yang cocok menghasilkan #DIV/0!.",
+      "Sel 0 yang cocok tetap ikut dirata-ratakan."
+    ],
+    "alternatives": [
+      "AVERAGEIFS",
+      "PivotTable"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "AVERAGEIF function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/averageif-function"
+    }
+  },
+  {
+    "id": "AVERAGEIFS",
+    "name": "AVERAGEIFS",
+    "category": "Logika & kondisi",
+    "purpose": "Menghitung rata-rata nilai yang memenuhi semua syarat.",
+    "syntax": "=AVERAGEIFS(average_range, criteria_range1, criteria1, [criteria_range2, criteria2], ...)",
+    "parameters": [
+      {
+        "name": "average_range",
+        "description": "Rentang angka yang dirata-ratakan."
+      },
+      {
+        "name": "criteria_range1",
+        "description": "Rentang kondisi pertama."
+      },
+      {
+        "name": "criteria1",
+        "description": "Kondisi pertama."
+      },
+      {
+        "name": "[criteria_range2, criteria2], ...",
+        "description": "Pasangan kondisi tambahan."
+      }
+    ],
+    "example": "A1:A3 = Tim A, Tim A, Tim B; B1:B3 = 80, 60, 90. Ketik =AVERAGEIFS(B1:B3,A1:A3,\"Tim A\",B1:B3,\">=75\").",
+    "result": "80",
+    "realWorld": "Rata-rata skor lulus dari tim tertentu.",
+    "mistakes": [
+      "Rentang harus sama ukuran.",
+      "Tidak ada data yang cocok menghasilkan #DIV/0!."
+    ],
+    "alternatives": [
+      "AVERAGEIF",
+      "PivotTable"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "AVERAGEIFS function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/averageifs-function"
+    }
+  },
+  {
+    "id": "LEFT",
+    "name": "LEFT",
+    "category": "Teks & pembersihan",
+    "purpose": "Mengambil karakter dari sisi kiri teks.",
+    "syntax": "=LEFT(text, [num_chars])",
+    "parameters": [
+      {
+        "name": "text",
+        "description": "Teks sumber."
+      },
+      {
+        "name": "[num_chars]",
+        "description": "Jumlah karakter; default 1."
+      }
+    ],
+    "example": "=LEFT(\"INV-2026-001\",3)",
+    "result": "INV",
+    "realWorld": "Mengambil awalan kategori dari kode transaksi.",
+    "mistakes": [
+      "Jumlah karakter negatif menghasilkan #VALUE!.",
+      "Hasil berupa teks meskipun seluruh karakternya angka."
+    ],
+    "alternatives": [
+      "MID",
+      "TEXTBEFORE untuk pemisah"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "LEFT function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/left-function"
+    }
+  },
+  {
+    "id": "RIGHT",
+    "name": "RIGHT",
+    "category": "Teks & pembersihan",
+    "purpose": "Mengambil karakter dari sisi kanan teks.",
+    "syntax": "=RIGHT(text, [num_chars])",
+    "parameters": [
+      {
+        "name": "text",
+        "description": "Teks sumber."
+      },
+      {
+        "name": "[num_chars]",
+        "description": "Jumlah karakter; default 1."
+      }
+    ],
+    "example": "=RIGHT(\"INV-2026-001\",3)",
+    "result": "001",
+    "realWorld": "Mengambil nomor urut dari kode.",
+    "mistakes": [
+      "Hasil 001 adalah teks; konversi VALUE akan menghilangkan nol awal."
+    ],
+    "alternatives": [
+      "MID",
+      "TEXTAFTER"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "RIGHT function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/right-function"
+    }
+  },
+  {
+    "id": "MID",
+    "name": "MID",
+    "category": "Teks & pembersihan",
+    "purpose": "Mengambil karakter mulai posisi tertentu.",
+    "syntax": "=MID(text, start_num, num_chars)",
+    "parameters": [
+      {
+        "name": "text",
+        "description": "Teks sumber."
+      },
+      {
+        "name": "start_num",
+        "description": "Posisi karakter pertama, dihitung dari 1."
+      },
+      {
+        "name": "num_chars",
+        "description": "Jumlah karakter yang diambil."
+      }
+    ],
+    "example": "=MID(\"INV-2026-001\",5,4)",
+    "result": "2026",
+    "realWorld": "Membaca tahun pada kode berformat tetap.",
+    "mistakes": [
+      "Posisi dimulai dari 1, bukan 0.",
+      "Kode dengan panjang berubah memerlukan pencarian pemisah lebih dahulu."
+    ],
+    "alternatives": [
+      "LEFT",
+      "RIGHT",
+      "TEXTSPLIT"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "MID function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/mid-function"
+    }
+  },
+  {
+    "id": "LEN",
+    "name": "LEN",
+    "category": "Teks & pembersihan",
+    "purpose": "Menghitung jumlah karakter pada teks.",
+    "syntax": "=LEN(text)",
+    "parameters": [
+      {
+        "name": "text",
+        "description": "Teks yang diukur."
+      }
+    ],
+    "example": "=LEN(\"AB 123\")",
+    "result": "6",
+    "realWorld": "Memvalidasi panjang kode pelanggan.",
+    "mistakes": [
+      "Spasi ikut dihitung.",
+      "Emoji/karakter Unicode tertentu dapat memiliki perilaku berbeda menurut Compatibility Version workbook."
+    ],
+    "alternatives": [
+      "TRIM lalu LEN untuk mengabaikan spasi berlebih"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "LEN function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/len-function"
+    }
+  },
+  {
+    "id": "TRIM",
+    "name": "TRIM",
+    "category": "Teks & pembersihan",
+    "purpose": "Menghapus spasi awal/akhir dan menyisakan satu spasi antarkata.",
+    "syntax": "=TRIM(text)",
+    "parameters": [
+      {
+        "name": "text",
+        "description": "Teks yang akan dirapikan."
+      }
+    ],
+    "example": "=TRIM(\"  Budi   Santoso  \")",
+    "result": "Budi Santoso",
+    "realWorld": "Merapikan nama hasil salinan aplikasi lain.",
+    "mistakes": [
+      "TRIM bekerja pada spasi ASCII 32; tidak menghapus nonbreaking space (160) dari web.",
+      "Untuk NBSP gunakan =TRIM(SUBSTITUTE(A1,CHAR(160),\" \"))."
+    ],
+    "alternatives": [
+      "CLEAN untuk karakter kontrol",
+      "SUBSTITUTE"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "TRIM function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/trim-function"
+    }
+  },
+  {
+    "id": "CLEAN",
+    "name": "CLEAN",
+    "category": "Teks & pembersihan",
+    "purpose": "Menghapus karakter kontrol ASCII 0–31 dari teks.",
+    "syntax": "=CLEAN(text)",
+    "parameters": [
+      {
+        "name": "text",
+        "description": "Teks yang perlu dibersihkan."
+      }
+    ],
+    "example": "=CLEAN(\"Kode\"&CHAR(9)&\"A\")",
+    "result": "KodeA",
+    "realWorld": "Menghapus tab atau line break dari hasil impor.",
+    "mistakes": [
+      "Tidak membersihkan semua karakter tak terlihat Unicode.",
+      "Karakter dihapus tanpa menambah spasi; dua kata dapat menyatu."
+    ],
+    "alternatives": [
+      "TRIM",
+      "SUBSTITUTE"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "CLEAN function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/clean-function"
+    }
+  },
+  {
+    "id": "UPPER",
+    "name": "UPPER",
+    "category": "Teks & pembersihan",
+    "purpose": "Mengubah huruf menjadi kapital.",
+    "syntax": "=UPPER(text)",
+    "parameters": [
+      {
+        "name": "text",
+        "description": "Teks sumber."
+      }
+    ],
+    "example": "=UPPER(\"jakarta 01\")",
+    "result": "JAKARTA 01",
+    "realWorld": "Menyeragamkan kode wilayah.",
+    "mistakes": [
+      "Angka dan tanda baca tidak berubah.",
+      "Formula membuat hasil baru; nilai sumber tidak otomatis diganti."
+    ],
+    "alternatives": [
+      "LOWER",
+      "PROPER"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "UPPER function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/upper-function"
+    }
+  },
+  {
+    "id": "LOWER",
+    "name": "LOWER",
+    "category": "Teks & pembersihan",
+    "purpose": "Mengubah huruf menjadi huruf kecil.",
+    "syntax": "=LOWER(text)",
+    "parameters": [
+      {
+        "name": "text",
+        "description": "Teks sumber."
+      }
+    ],
+    "example": "=LOWER(\"NAMA@CONTOH.COM\")",
+    "result": "nama@contoh.com",
+    "realWorld": "Menyeragamkan tampilan daftar email.",
+    "mistakes": [
+      "Perubahan kapitalisasi tidak memvalidasi apakah alamat email benar."
+    ],
+    "alternatives": [
+      "UPPER",
+      "PROPER"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "LOWER function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/lower-function"
+    }
+  },
+  {
+    "id": "PROPER",
+    "name": "PROPER",
+    "category": "Teks & pembersihan",
+    "purpose": "Membuat huruf awal setiap kata kapital dan huruf lain kecil.",
+    "syntax": "=PROPER(text)",
+    "parameters": [
+      {
+        "name": "text",
+        "description": "Teks sumber."
+      }
+    ],
+    "example": "=PROPER(\"bUDI sANTOSO\")",
+    "result": "Budi Santoso",
+    "realWorld": "Merapikan nama untuk laporan.",
+    "mistakes": [
+      "Akronim seperti PT menjadi Pt; nama khusus perlu pemeriksaan manual.",
+      "Huruf setelah karakter nonhuruf juga dapat dikapitalisasi."
+    ],
+    "alternatives": [
+      "UPPER",
+      "LOWER"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "PROPER function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/proper-function"
+    }
+  },
+  {
+    "id": "CONCAT",
+    "name": "CONCAT",
+    "category": "Teks & pembersihan",
+    "purpose": "Menggabungkan beberapa teks atau rentang.",
+    "syntax": "=CONCAT(text1, [text2], ...)",
+    "parameters": [
+      {
+        "name": "text1",
+        "description": "Teks atau rentang pertama."
+      },
+      {
+        "name": "[text2], ...",
+        "description": "Teks atau rentang tambahan."
+      }
+    ],
+    "example": "=CONCAT(\"INV\",\"-\",2026,\"-\",\"001\")",
+    "result": "INV-2026-001",
+    "realWorld": "Membentuk kode transaksi dari beberapa bagian.",
+    "mistakes": [
+      "Tidak menambah pemisah secara otomatis.",
+      "CONCAT tidak memiliki argumen ignore_empty."
+    ],
+    "alternatives": [
+      "Operator &",
+      "TEXTJOIN"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Microsoft 365 Windows/Mac dan Excel Web; Excel 2019, 2021, 2024 Windows/Mac. Tidak tersedia pada Excel 2016 perpetual.",
+    "source": {
+      "title": "CONCAT function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/concat-function"
+    }
+  },
+  {
+    "id": "TEXTJOIN",
+    "name": "TEXTJOIN",
+    "category": "Teks & pembersihan",
+    "purpose": "Menggabungkan teks dengan pemisah dan pilihan mengabaikan sel kosong.",
+    "syntax": "=TEXTJOIN(delimiter, ignore_empty, text1, [text2], ...)",
+    "parameters": [
+      {
+        "name": "delimiter",
+        "description": "Pemisah antarteks."
+      },
+      {
+        "name": "ignore_empty",
+        "description": "TRUE untuk mengabaikan sel kosong."
+      },
+      {
+        "name": "text1",
+        "description": "Teks atau rentang pertama."
+      },
+      {
+        "name": "[text2], ...",
+        "description": "Teks/rentang tambahan."
+      }
+    ],
+    "example": "=TEXTJOIN(\" / \",TRUE,\"Kopi\",\"Teh\",\"Susu\")",
+    "result": "Kopi / Teh / Susu",
+    "realWorld": "Menyusun daftar produk atau alamat.",
+    "mistakes": [
+      "Hasil melebihi batas 32.767 karakter sel menghasilkan #VALUE!."
+    ],
+    "alternatives": [
+      "CONCAT",
+      "Operator &"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Microsoft 365 Windows/Mac dan Excel Web; Excel 2019, 2021, 2024 Windows/Mac. Tidak tersedia pada Excel 2016 perpetual.",
+    "source": {
+      "title": "TEXTJOIN function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/textjoin-function"
+    }
+  },
+  {
+    "id": "SUBSTITUTE",
+    "name": "SUBSTITUTE",
+    "category": "Teks & pembersihan",
+    "purpose": "Mengganti teks tertentu di dalam teks sumber.",
+    "syntax": "=SUBSTITUTE(text, old_text, new_text, [instance_num])",
+    "parameters": [
+      {
+        "name": "text",
+        "description": "Teks sumber."
+      },
+      {
+        "name": "old_text",
+        "description": "Bagian teks yang dicari."
+      },
+      {
+        "name": "new_text",
+        "description": "Teks pengganti."
+      },
+      {
+        "name": "[instance_num]",
+        "description": "Kemunculan ke-n; jika diabaikan mengganti semuanya."
+      }
+    ],
+    "example": "=SUBSTITUTE(\"INV/2026/001\",\"/\",\"-\")",
+    "result": "INV-2026-001",
+    "realWorld": "Menyeragamkan pemisah kode.",
+    "mistakes": [
+      "Pencarian peka huruf besar/kecil.",
+      "SUBSTITUTE mencari teks; REPLACE mengganti berdasarkan posisi."
+    ],
+    "alternatives": [
+      "REPLACE",
+      "Find & Replace"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "SUBSTITUTE function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/substitute-function"
+    }
+  },
+  {
+    "id": "TEXT",
+    "name": "TEXT",
+    "category": "Teks & pembersihan",
+    "purpose": "Memformat angka lalu mengembalikan hasil sebagai teks.",
+    "syntax": "=TEXT(value, format_text)",
+    "parameters": [
+      {
+        "name": "value",
+        "description": "Angka atau tanggal yang valid."
+      },
+      {
+        "name": "format_text",
+        "description": "Kode format dalam tanda kutip."
+      }
+    ],
+    "example": "=TEXT(42,\"00000\")",
+    "result": "00042",
+    "realWorld": "Membentuk ID dengan lebar tetap.",
+    "mistakes": [
+      "Hasil berupa teks sehingga tidak ideal sebagai sumber perhitungan lanjutan.",
+      "Kode format tanggal/mata uang dipengaruhi regional dan bahasa Excel."
+    ],
+    "alternatives": [
+      "Format Cells jika nilai harus tetap numerik"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "TEXT function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/text-function"
+    }
+  },
+  {
+    "id": "VALUE",
+    "name": "VALUE",
+    "category": "Teks & pembersihan",
+    "purpose": "Mengonversi teks angka yang dikenali Excel menjadi angka.",
+    "syntax": "=VALUE(text)",
+    "parameters": [
+      {
+        "name": "text",
+        "description": "Teks angka, tanggal, atau waktu yang dikenali pengaturan lokal."
+      }
+    ],
+    "example": "=VALUE(\"1250\")",
+    "result": "1250 (angka)",
+    "realWorld": "Mengubah kolom angka hasil impor agar dapat dijumlahkan.",
+    "mistakes": [
+      "Format pemisah desimal/ribuan harus dikenali locale.",
+      "Teks yang tidak dikenali menghasilkan #VALUE!."
+    ],
+    "alternatives": [
+      "NUMBERVALUE untuk pemisah eksplisit",
+      "Text to Columns"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "VALUE function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/value-function"
+    }
+  },
+  {
+    "id": "TODAY",
+    "name": "TODAY",
+    "category": "Tanggal & waktu",
+    "purpose": "Mengembalikan tanggal saat workbook dihitung.",
+    "syntax": "=TODAY()",
+    "parameters": [],
+    "example": "=TODAY()",
+    "result": "Tanggal saat ini menurut lingkungan Excel; tampilkan dengan format tanggal.",
+    "realWorld": "Menghitung umur piutang menggunakan tanggal hari ini.",
+    "mistakes": [
+      "TODAY bukan stempel waktu tetap; nilainya berubah saat kalkulasi ulang.",
+      "Hasilnya angka serial tanggal, bukan teks."
+    ],
+    "alternatives": [
+      "Tanggal statis untuk pencatatan",
+      "NOW untuk tanggal dan jam"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "TODAY function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/today-function"
+    }
+  },
+  {
+    "id": "NOW",
+    "name": "NOW",
+    "category": "Tanggal & waktu",
+    "purpose": "Mengembalikan tanggal dan waktu ketika Excel menghitung ulang.",
+    "syntax": "=NOW()",
+    "parameters": [],
+    "example": "=NOW()",
+    "result": "Tanggal dan jam lingkungan Excel pada kalkulasi terakhir.",
+    "realWorld": "Menampilkan waktu pembaruan perhitungan workbook.",
+    "mistakes": [
+      "Tidak berdetak setiap detik; berubah ketika dihitung ulang.",
+      "Jangan gunakan sebagai timestamp transaksi permanen."
+    ],
+    "alternatives": [
+      "TODAY",
+      "Timestamp statis"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "NOW function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/now-function"
+    }
+  },
+  {
+    "id": "DATE",
+    "name": "DATE",
+    "category": "Tanggal & waktu",
+    "purpose": "Menyusun tanggal dari tahun, bulan, dan hari.",
+    "syntax": "=DATE(year, month, day)",
+    "parameters": [
+      {
+        "name": "year",
+        "description": "Tahun; gunakan empat digit."
+      },
+      {
+        "name": "month",
+        "description": "Bulan, umumnya 1–12."
+      },
+      {
+        "name": "day",
+        "description": "Hari dalam bulan."
+      }
+    ],
+    "example": "=DATE(2026,10,6)",
+    "result": "6 Oktober 2026 setelah format tanggal diterapkan.",
+    "realWorld": "Membentuk tanggal valid tanpa ambiguitas teks lokal.",
+    "mistakes": [
+      "Bulan/hari di luar rentang dinormalisasi; DATE(2026,13,1) menjadi 1 Januari 2027.",
+      "Angka serial terlihat jika format sel masih General."
+    ],
+    "alternatives": [
+      "DATEVALUE untuk teks tanggal yang dikenali"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "DATE function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/date-function"
+    }
+  },
+  {
+    "id": "DAY",
+    "name": "DAY",
+    "category": "Tanggal & waktu",
+    "purpose": "Mengambil nomor hari dalam bulan.",
+    "syntax": "=DAY(serial_number)",
+    "parameters": [
+      {
+        "name": "serial_number",
+        "description": "Tanggal valid atau formula DATE."
+      }
+    ],
+    "example": "=DAY(DATE(2026,10,6))",
+    "result": "6",
+    "realWorld": "Mengelompokkan transaksi menurut tanggal dalam bulan.",
+    "mistakes": [
+      "DAY bukan hari dalam seminggu; gunakan WEEKDAY untuk itu.",
+      "Teks tanggal ambigu dapat terbaca salah sesuai locale."
+    ],
+    "alternatives": [
+      "WEEKDAY",
+      "TEXT"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "DAY function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/day-function"
+    }
+  },
+  {
+    "id": "MONTH",
+    "name": "MONTH",
+    "category": "Tanggal & waktu",
+    "purpose": "Mengambil nomor bulan 1–12.",
+    "syntax": "=MONTH(serial_number)",
+    "parameters": [
+      {
+        "name": "serial_number",
+        "description": "Tanggal Excel yang valid."
+      }
+    ],
+    "example": "=MONTH(DATE(2026,10,6))",
+    "result": "10",
+    "realWorld": "Membuat kolom bantu analisis bulanan.",
+    "mistakes": [
+      "Bulan 10 dari tahun berbeda akan tercampur jika hanya mengelompokkan MONTH."
+    ],
+    "alternatives": [
+      "YEAR bersama MONTH",
+      "TEXT untuk label bulan"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "MONTH function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/month-function"
+    }
+  },
+  {
+    "id": "YEAR",
+    "name": "YEAR",
+    "category": "Tanggal & waktu",
+    "purpose": "Mengambil tahun dari tanggal.",
+    "syntax": "=YEAR(serial_number)",
+    "parameters": [
+      {
+        "name": "serial_number",
+        "description": "Tanggal Excel yang valid."
+      }
+    ],
+    "example": "=YEAR(DATE(2026,10,6))",
+    "result": "2026",
+    "realWorld": "Menyusun ringkasan transaksi tahunan.",
+    "mistakes": [
+      "Angka biasa akan ditafsirkan sebagai serial tanggal; pastikan kolom sumber benar-benar tanggal."
+    ],
+    "alternatives": [
+      "TEXT untuk label tahun"
+    ],
+    "difficulty": "Dasar",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "YEAR function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/year-function"
+    }
+  },
+  {
+    "id": "DATEDIF",
+    "name": "DATEDIF",
+    "category": "Tanggal & waktu",
+    "purpose": "Menghitung selisih tahun, bulan, atau hari antara dua tanggal.",
+    "syntax": "=DATEDIF(start_date, end_date, unit)",
+    "parameters": [
+      {
+        "name": "start_date",
+        "description": "Tanggal awal, harus tidak melewati tanggal akhir."
+      },
+      {
+        "name": "end_date",
+        "description": "Tanggal akhir."
+      },
+      {
+        "name": "unit",
+        "description": "\"Y\" tahun utuh, \"M\" bulan utuh, \"D\" hari; ada unit khusus lainnya."
+      }
+    ],
+    "example": "=DATEDIF(DATE(2020,10,6),DATE(2026,10,6),\"Y\")",
+    "result": "6",
+    "realWorld": "Menghitung masa kerja dalam tahun penuh.",
+    "mistakes": [
+      "Microsoft tidak menyarankan unit \"MD\" karena dapat menghasilkan nilai keliru.",
+      "Tanggal awal lebih besar dari akhir menghasilkan #NUM!.",
+      "Untuk total hari, pengurangan tanggal akhir − awal lebih sederhana."
+    ],
+    "alternatives": [
+      "Pengurangan tanggal",
+      "YEARFRAC sesuai kebutuhan perhitungan"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "DATEDIF function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/datedif-function"
+    }
+  },
+  {
+    "id": "EDATE",
+    "name": "EDATE",
+    "category": "Tanggal & waktu",
+    "purpose": "Menggeser tanggal beberapa bulan.",
+    "syntax": "=EDATE(start_date, months)",
+    "parameters": [
+      {
+        "name": "start_date",
+        "description": "Tanggal awal."
+      },
+      {
+        "name": "months",
+        "description": "Jumlah bulan maju; negatif untuk mundur."
+      }
+    ],
+    "example": "=EDATE(DATE(2026,1,15),3)",
+    "result": "15 April 2026 setelah format tanggal.",
+    "realWorld": "Menghitung jatuh tempo tiga bulan dari tanggal kontrak.",
+    "mistakes": [
+      "Tanggal akhir bulan dapat menyesuaikan ke hari terakhir bulan tujuan.",
+      "months adalah bulan, bukan hari."
+    ],
+    "alternatives": [
+      "EOMONTH untuk akhir bulan"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "EDATE function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/edate-function"
+    }
+  },
+  {
+    "id": "EOMONTH",
+    "name": "EOMONTH",
+    "category": "Tanggal & waktu",
+    "purpose": "Mengambil akhir bulan setelah pergeseran bulan.",
+    "syntax": "=EOMONTH(start_date, months)",
+    "parameters": [
+      {
+        "name": "start_date",
+        "description": "Tanggal acuan."
+      },
+      {
+        "name": "months",
+        "description": "0 untuk bulan yang sama; negatif untuk bulan sebelumnya."
+      }
+    ],
+    "example": "=EOMONTH(DATE(2026,2,10),0)",
+    "result": "28 Februari 2026 setelah format tanggal.",
+    "realWorld": "Menetapkan tanggal tutup laporan bulanan.",
+    "mistakes": [
+      "Gunakan format tanggal untuk melihat tanggal, bukan angka serial."
+    ],
+    "alternatives": [
+      "EDATE",
+      "DATE dengan hari 0 pada bulan berikutnya"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "EOMONTH function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/eomonth-function"
+    }
+  },
+  {
+    "id": "WORKDAY",
+    "name": "WORKDAY",
+    "category": "Tanggal & waktu",
+    "purpose": "Mencari tanggal sebelum/sesudah sejumlah hari kerja; Sabtu–Minggu dikecualikan.",
+    "syntax": "=WORKDAY(start_date, days, [holidays])",
+    "parameters": [
+      {
+        "name": "start_date",
+        "description": "Tanggal awal."
+      },
+      {
+        "name": "days",
+        "description": "Jumlah hari kerja; negatif untuk mundur."
+      },
+      {
+        "name": "[holidays]",
+        "description": "Rentang tanggal libur yang dikecualikan; opsional."
+      }
+    ],
+    "example": "=WORKDAY(DATE(2026,10,2),3)",
+    "result": "7 Oktober 2026 (tanpa daftar hari libur).",
+    "realWorld": "Menentukan tenggat tiga hari kerja setelah Jumat.",
+    "mistakes": [
+      "Tanggal awal tidak dihitung sebagai hari kerja pertama saat days positif.",
+      "Libur nasional tidak otomatis diketahui; isi holidays."
+    ],
+    "alternatives": [
+      "WORKDAY.INTL untuk akhir pekan khusus"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "WORKDAY function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/workday-function"
+    }
+  },
+  {
+    "id": "NETWORKDAYS",
+    "name": "NETWORKDAYS",
+    "category": "Tanggal & waktu",
+    "purpose": "Menghitung hari kerja antara dua tanggal, inklusif, tanpa Sabtu–Minggu.",
+    "syntax": "=NETWORKDAYS(start_date, end_date, [holidays])",
+    "parameters": [
+      {
+        "name": "start_date",
+        "description": "Tanggal awal."
+      },
+      {
+        "name": "end_date",
+        "description": "Tanggal akhir."
+      },
+      {
+        "name": "[holidays]",
+        "description": "Rentang tanggal libur; opsional."
+      }
+    ],
+    "example": "=NETWORKDAYS(DATE(2026,10,5),DATE(2026,10,9))",
+    "result": "5",
+    "realWorld": "Menghitung hari kerja dalam periode kehadiran.",
+    "mistakes": [
+      "Tanggal awal dan akhir dihitung jika keduanya hari kerja.",
+      "Tanpa holidays, hari libur nasional pada hari kerja tetap dihitung."
+    ],
+    "alternatives": [
+      "NETWORKDAYS.INTL"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "NETWORKDAYS function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/networkdays-function"
+    }
+  },
+  {
+    "id": "VLOOKUP",
+    "name": "VLOOKUP",
+    "category": "Lookup & referensi",
+    "purpose": "Mencari pada kolom pertama tabel dan mengambil nilai dari kolom di kanan.",
+    "syntax": "=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])",
+    "parameters": [
+      {
+        "name": "lookup_value",
+        "description": "Nilai yang dicari."
+      },
+      {
+        "name": "table_array",
+        "description": "Tabel; kunci harus di kolom pertama."
+      },
+      {
+        "name": "col_index_num",
+        "description": "Nomor kolom hasil, dihitung dari 1 dalam tabel."
+      },
+      {
+        "name": "[range_lookup]",
+        "description": "FALSE untuk exact match; TRUE/default untuk approximate match."
+      }
+    ],
+    "example": "A1:B2 berisi P01, 15000 pada baris 1 dan P02, 22000 pada baris 2. Ketik =VLOOKUP(\"P02\",A1:B2,2,FALSE).",
+    "result": "22000",
+    "realWorld": "Mengambil harga dari master produk.",
+    "mistakes": [
+      "Mengabaikan FALSE dapat memberi hasil salah untuk ID karena default adalah approximate match.",
+      "Mode TRUE memerlukan kolom pertama terurut menaik.",
+      "Tidak mencari ke kiri."
+    ],
+    "alternatives": [
+      "XLOOKUP",
+      "INDEX + MATCH"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "VLOOKUP function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/vlookup-function"
+    }
+  },
+  {
+    "id": "HLOOKUP",
+    "name": "HLOOKUP",
+    "category": "Lookup & referensi",
+    "purpose": "Mencari pada baris pertama dan mengambil nilai dari baris di bawah.",
+    "syntax": "=HLOOKUP(lookup_value, table_array, row_index_num, [range_lookup])",
+    "parameters": [
+      {
+        "name": "lookup_value",
+        "description": "Nilai yang dicari pada baris pertama."
+      },
+      {
+        "name": "table_array",
+        "description": "Tabel horizontal."
+      },
+      {
+        "name": "row_index_num",
+        "description": "Nomor baris hasil dalam tabel."
+      },
+      {
+        "name": "[range_lookup]",
+        "description": "FALSE untuk exact match; TRUE/default untuk approximate match."
+      }
+    ],
+    "example": "A1:C1 = Jan, Feb, Mar; A2:C2 = 100, 120, 150. Ketik =HLOOKUP(\"Feb\",A1:C2,2,FALSE).",
+    "result": "120",
+    "realWorld": "Mengambil target dari tabel bulan horizontal.",
+    "mistakes": [
+      "Mode TRUE/default memerlukan baris pertama terurut.",
+      "Penyisipan baris dapat mengubah makna indeks hasil."
+    ],
+    "alternatives": [
+      "XLOOKUP",
+      "INDEX + MATCH"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "HLOOKUP function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/hlookup-function"
+    }
+  },
+  {
+    "id": "XLOOKUP",
+    "name": "XLOOKUP",
+    "category": "Lookup & referensi",
+    "purpose": "Mencari kunci dan mengembalikan nilai terkait dengan exact match sebagai default.",
+    "syntax": "=XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])",
+    "parameters": [
+      {
+        "name": "lookup_value",
+        "description": "Kunci pencarian."
+      },
+      {
+        "name": "lookup_array",
+        "description": "Satu baris atau kolom kunci."
+      },
+      {
+        "name": "return_array",
+        "description": "Rentang hasil yang sejajar."
+      },
+      {
+        "name": "[if_not_found]",
+        "description": "Hasil bila kunci tidak ditemukan."
+      },
+      {
+        "name": "[match_mode]",
+        "description": "0 exact/default; -1 lebih kecil; 1 lebih besar; 2 wildcard."
+      },
+      {
+        "name": "[search_mode]",
+        "description": "1 dari awal/default; -1 dari akhir; ±2 pencarian biner terurut."
+      }
+    ],
+    "example": "A1:A2 = P01, P02; B1:B2 = 15000, 22000. Ketik =XLOOKUP(\"P02\",A1:A2,B1:B2,\"Tidak ada\").",
+    "result": "22000",
+    "realWorld": "Mengambil harga dari master tanpa menghitung indeks kolom.",
+    "mistakes": [
+      "Mode biner memerlukan urutan yang benar.",
+      "Secara default hanya kecocokan pertama dikembalikan; FILTER untuk semua baris cocok."
+    ],
+    "alternatives": [
+      "INDEX + MATCH",
+      "VLOOKUP"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Microsoft 365 Windows/Mac dan Excel Web; Excel 2021/2024 Windows/Mac. Tidak tersedia pada Excel 2016/2019 perpetual.",
+    "source": {
+      "title": "XLOOKUP function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/xlookup-function"
+    }
+  },
+  {
+    "id": "INDEX",
+    "name": "INDEX",
+    "category": "Lookup & referensi",
+    "purpose": "Mengambil nilai pada posisi baris/kolom di dalam array atau rentang.",
+    "syntax": "=INDEX(array, row_num, [column_num])",
+    "parameters": [
+      {
+        "name": "array",
+        "description": "Rentang atau array sumber."
+      },
+      {
+        "name": "row_num",
+        "description": "Posisi baris dalam array."
+      },
+      {
+        "name": "[column_num]",
+        "description": "Posisi kolom; diperlukan untuk memilih kolom pada array dua dimensi."
+      }
+    ],
+    "example": "=INDEX({10,20;30,40},2,1)",
+    "result": "30",
+    "realWorld": "Mengambil hasil pada posisi yang ditemukan MATCH.",
+    "mistakes": [
+      "Indeks relatif terhadap rentang, bukan nomor baris sheet.",
+      "Indeks melewati batas menghasilkan #REF!."
+    ],
+    "alternatives": [
+      "XLOOKUP",
+      "OFFSET"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "INDEX function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/index-function"
+    }
+  },
+  {
+    "id": "MATCH",
+    "name": "MATCH",
+    "category": "Lookup & referensi",
+    "purpose": "Mengembalikan posisi relatif sebuah nilai.",
+    "syntax": "=MATCH(lookup_value, lookup_array, [match_type])",
+    "parameters": [
+      {
+        "name": "lookup_value",
+        "description": "Nilai pencarian."
+      },
+      {
+        "name": "lookup_array",
+        "description": "Satu baris atau kolom pencarian."
+      },
+      {
+        "name": "[match_type]",
+        "description": "0 exact; 1/default approximate pada urutan naik; -1 pada urutan turun."
+      }
+    ],
+    "example": "=MATCH(\"Teh\",{\"Kopi\",\"Teh\",\"Susu\"},0)",
+    "result": "2",
+    "realWorld": "Mendapatkan posisi produk untuk INDEX.",
+    "mistakes": [
+      "Gunakan 0 untuk mencari ID secara tepat.",
+      "Hasil adalah posisi, bukan isi sel yang bersebelahan."
+    ],
+    "alternatives": [
+      "XMATCH",
+      "XLOOKUP"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "MATCH function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/match-function"
+    }
+  },
+  {
+    "id": "XMATCH",
+    "name": "XMATCH",
+    "category": "Lookup & referensi",
+    "purpose": "Mencari posisi relatif dengan exact match sebagai default.",
+    "syntax": "=XMATCH(lookup_value, lookup_array, [match_mode], [search_mode])",
+    "parameters": [
+      {
+        "name": "lookup_value",
+        "description": "Nilai yang dicari."
+      },
+      {
+        "name": "lookup_array",
+        "description": "Baris atau kolom pencarian."
+      },
+      {
+        "name": "[match_mode]",
+        "description": "0 exact/default; -1 lebih kecil; 1 lebih besar; 2 wildcard."
+      },
+      {
+        "name": "[search_mode]",
+        "description": "1 dari awal; -1 dari akhir; 2/-2 biner yang mensyaratkan urutan."
+      }
+    ],
+    "example": "=XMATCH(\"Teh\",{\"Kopi\",\"Teh\",\"Susu\"})",
+    "result": "2",
+    "realWorld": "Mencari indeks dinamis untuk laporan.",
+    "mistakes": [
+      "Urutan match_mode tidak sama dengan MATCH.",
+      "Pencarian biner tanpa data terurut dapat memberi hasil salah."
+    ],
+    "alternatives": [
+      "MATCH",
+      "XLOOKUP"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Microsoft 365 Windows/Mac dan Excel Web; Excel 2021/2024 Windows/Mac. Tidak tersedia pada Excel 2016/2019 perpetual.",
+    "source": {
+      "title": "XMATCH function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/xmatch-function"
+    }
+  },
+  {
+    "id": "OFFSET",
+    "name": "OFFSET",
+    "category": "Lookup & referensi",
+    "purpose": "Membentuk referensi dengan menggeser baris dan kolom dari titik acuan.",
+    "syntax": "=OFFSET(reference, rows, cols, [height], [width])",
+    "parameters": [
+      {
+        "name": "reference",
+        "description": "Referensi awal."
+      },
+      {
+        "name": "rows",
+        "description": "Pergeseran baris; positif ke bawah."
+      },
+      {
+        "name": "cols",
+        "description": "Pergeseran kolom; positif ke kanan."
+      },
+      {
+        "name": "[height]",
+        "description": "Tinggi referensi hasil."
+      },
+      {
+        "name": "[width]",
+        "description": "Lebar referensi hasil."
+      }
+    ],
+    "example": "Isi B2=20, B3=30. Ketik =SUM(OFFSET(B2,0,0,2,1)).",
+    "result": "50",
+    "realWorld": "Membentuk rentang bergerak untuk ringkasan.",
+    "mistakes": [
+      "OFFSET bersifat volatile dan dapat memperlambat workbook besar.",
+      "Referensi yang melampaui sheet menghasilkan #REF!."
+    ],
+    "alternatives": [
+      "INDEX",
+      "Excel Table dengan structured references"
+    ],
+    "difficulty": "Lanjutan",
+    "availability": "Excel Microsoft 365, Excel 2024/2021/2019/2016 Windows; Excel Mac yang mendukung versi tersebut; Excel Web. Nama fungsi dan pemisah argumen dapat mengikuti bahasa/regional Excel.",
+    "source": {
+      "title": "OFFSET function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/offset-function"
+    }
+  },
+  {
+    "id": "FILTER",
+    "name": "FILTER",
+    "category": "Array dinamis & modern",
+    "purpose": "Menghasilkan baris atau kolom yang memenuhi kondisi.",
+    "syntax": "=FILTER(array, include, [if_empty])",
+    "parameters": [
+      {
+        "name": "array",
+        "description": "Data sumber."
+      },
+      {
+        "name": "include",
+        "description": "Array TRUE/FALSE yang sejajar dengan baris/kolom sumber."
+      },
+      {
+        "name": "[if_empty]",
+        "description": "Hasil saat tidak ada kecocokan."
+      }
+    ],
+    "example": "=FILTER({40;80;90},{40;80;90}>=75,\"Tidak ada\")",
+    "result": "80 dan 90 pada dua baris (spill).",
+    "realWorld": "Membuat daftar peserta lulus yang otomatis berubah.",
+    "mistakes": [
+      "Kosongkan area hasil agar tidak #SPILL!.",
+      "Tanpa if_empty, hasil kosong dapat #CALC!.",
+      "Letakkan formula spill di luar Excel Table."
+    ],
+    "alternatives": [
+      "AutoFilter",
+      "Advanced Filter"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Microsoft 365 Windows/Mac dan Excel Web; Excel 2021/2024 Windows/Mac. Tidak tersedia pada Excel 2016/2019 perpetual.",
+    "source": {
+      "title": "FILTER function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/filter-function"
+    }
+  },
+  {
+    "id": "SORT",
+    "name": "SORT",
+    "category": "Array dinamis & modern",
+    "purpose": "Mengurutkan array berdasarkan nomor kolom atau baris.",
+    "syntax": "=SORT(array, [sort_index], [sort_order], [by_col])",
+    "parameters": [
+      {
+        "name": "array",
+        "description": "Data yang diurutkan."
+      },
+      {
+        "name": "[sort_index]",
+        "description": "Indeks kolom/baris acuan; default 1."
+      },
+      {
+        "name": "[sort_order]",
+        "description": "1 menaik/default; -1 menurun."
+      },
+      {
+        "name": "[by_col]",
+        "description": "FALSE/default mengurutkan baris; TRUE mengurutkan kolom."
+      }
+    ],
+    "example": "=SORT({30;10;20},1,1)",
+    "result": "10, 20, 30 pada tiga baris.",
+    "realWorld": "Membuat daftar harga terurut tanpa mengubah data sumber.",
+    "mistakes": [
+      "Area spill harus kosong.",
+      "Jika struktur kolom berubah, indeks sort dapat perlu diperbarui."
+    ],
+    "alternatives": [
+      "SORTBY",
+      "Menu Sort"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Microsoft 365 Windows/Mac dan Excel Web; Excel 2021/2024 Windows/Mac. Tidak tersedia pada Excel 2016/2019 perpetual.",
+    "source": {
+      "title": "SORT function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/sort-function"
+    }
+  },
+  {
+    "id": "SORTBY",
+    "name": "SORTBY",
+    "category": "Array dinamis & modern",
+    "purpose": "Mengurutkan data berdasarkan satu atau beberapa array acuan.",
+    "syntax": "=SORTBY(array, by_array1, [sort_order1], [by_array2, sort_order2], ...)",
+    "parameters": [
+      {
+        "name": "array",
+        "description": "Data hasil yang diurutkan."
+      },
+      {
+        "name": "by_array1",
+        "description": "Rentang/array pengurutan pertama yang sejajar."
+      },
+      {
+        "name": "[sort_order1]",
+        "description": "1 menaik/default; -1 menurun."
+      },
+      {
+        "name": "[by_array2, sort_order2], ...",
+        "description": "Kunci pengurutan tambahan."
+      }
+    ],
+    "example": "=SORTBY({\"Kopi\";\"Teh\";\"Susu\"},{30;10;20},1)",
+    "result": "Teh, Susu, Kopi pada tiga baris.",
+    "realWorld": "Mengurutkan nama produk berdasarkan penjualan.",
+    "mistakes": [
+      "Dimensi acuan harus sejajar dengan data.",
+      "SORTBY menggunakan rentang acuan, bukan nomor kolom seperti SORT."
+    ],
+    "alternatives": [
+      "SORT",
+      "Menu Sort"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Microsoft 365 Windows/Mac dan Excel Web; Excel 2021/2024 Windows/Mac. Tidak tersedia pada Excel 2016/2019 perpetual.",
+    "source": {
+      "title": "SORTBY function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/sortby-function"
+    }
+  },
+  {
+    "id": "UNIQUE",
+    "name": "UNIQUE",
+    "category": "Array dinamis & modern",
+    "purpose": "Menghasilkan daftar nilai atau baris unik.",
+    "syntax": "=UNIQUE(array, [by_col], [exactly_once])",
+    "parameters": [
+      {
+        "name": "array",
+        "description": "Data sumber."
+      },
+      {
+        "name": "[by_col]",
+        "description": "FALSE/default membandingkan baris; TRUE kolom."
+      },
+      {
+        "name": "[exactly_once]",
+        "description": "FALSE/default mengambil nilai berbeda; TRUE hanya nilai yang muncul sekali."
+      }
+    ],
+    "example": "=UNIQUE({\"Kopi\";\"Teh\";\"Kopi\";\"Susu\"})",
+    "result": "Kopi, Teh, Susu pada tiga baris.",
+    "realWorld": "Membentuk daftar pilihan kategori dari transaksi.",
+    "mistakes": [
+      "exactly_once=TRUE akan menghilangkan Kopi pada contoh karena muncul dua kali.",
+      "Bersihkan spasi tersembunyi agar nama yang sama tidak dianggap berbeda."
+    ],
+    "alternatives": [
+      "Remove Duplicates",
+      "PivotTable"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Microsoft 365 Windows/Mac dan Excel Web; Excel 2021/2024 Windows/Mac. Tidak tersedia pada Excel 2016/2019 perpetual.",
+    "source": {
+      "title": "UNIQUE function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/unique-function"
+    }
+  },
+  {
+    "id": "SEQUENCE",
+    "name": "SEQUENCE",
+    "category": "Array dinamis & modern",
+    "purpose": "Membangun deret angka sebagai array.",
+    "syntax": "=SEQUENCE(rows, [columns], [start], [step])",
+    "parameters": [
+      {
+        "name": "rows",
+        "description": "Jumlah baris hasil."
+      },
+      {
+        "name": "[columns]",
+        "description": "Jumlah kolom; default 1."
+      },
+      {
+        "name": "[start]",
+        "description": "Angka awal; default 1."
+      },
+      {
+        "name": "[step]",
+        "description": "Kenaikan setiap elemen; default 1."
+      }
+    ],
+    "example": "=SEQUENCE(4,1,10,5)",
+    "result": "10, 15, 20, 25 pada empat baris.",
+    "realWorld": "Membuat nomor urut atau dasar kalender dinamis.",
+    "mistakes": [
+      "Area spill harus kosong.",
+      "Deret bersifat dinamis dan bukan ID tetap yang aman jika urutan data berubah."
+    ],
+    "alternatives": [
+      "Fill Series",
+      "ROW"
+    ],
+    "difficulty": "Menengah",
+    "availability": "Microsoft 365 Windows/Mac dan Excel Web; Excel 2021/2024 Windows/Mac. Tidak tersedia pada Excel 2016/2019 perpetual.",
+    "source": {
+      "title": "SEQUENCE function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/sequence-function"
+    }
+  },
+  {
+    "id": "LET",
+    "name": "LET",
+    "category": "Array dinamis & modern",
+    "purpose": "Memberi nama pada nilai/perhitungan sementara dalam satu formula.",
+    "syntax": "=LET(name1, name_value1, [name2, name_value2], ..., calculation)",
+    "parameters": [
+      {
+        "name": "name1",
+        "description": "Nama variabel yang valid; tidak boleh menyerupai referensi sel."
+      },
+      {
+        "name": "name_value1",
+        "description": "Nilai atau perhitungan untuk nama tersebut."
+      },
+      {
+        "name": "[name2, name_value2], ...",
+        "description": "Pasangan nama/nilai tambahan; opsional."
+      },
+      {
+        "name": "calculation",
+        "description": "Perhitungan terakhir yang dikembalikan."
+      }
+    ],
+    "example": "=LET(harga,150000,diskon,0.1,harga*(1-diskon))",
+    "result": "135000",
+    "realWorld": "Membuat formula harga setelah diskon lebih mudah dibaca.",
+    "mistakes": [
+      "Nama hanya berlaku di dalam formula LET tersebut.",
+      "Setiap nama sebelum argumen terakhir harus diikuti nilai. Akhiri dengan ekspresi hasil, yang boleh berupa nama yang telah didefinisikan."
+    ],
+    "alternatives": [
+      "Kolom bantu",
+      "Defined Names"
+    ],
+    "difficulty": "Lanjutan",
+    "availability": "Microsoft 365 Windows/Mac dan Excel Web; Excel 2021/2024 Windows/Mac. Tidak tersedia pada Excel 2016/2019 perpetual.",
+    "source": {
+      "title": "LET function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/let-function"
+    }
+  },
+  {
+    "id": "LAMBDA",
+    "name": "LAMBDA",
+    "category": "Array dinamis & modern",
+    "purpose": "Membuat fungsi formula yang dapat dipakai ulang tanpa VBA.",
+    "syntax": "=LAMBDA([parameter1, parameter2, ...], calculation)",
+    "parameters": [
+      {
+        "name": "[parameter1, parameter2, ...]",
+        "description": "Nama input yang valid; opsional jika fungsi tanpa input."
+      },
+      {
+        "name": "calculation",
+        "description": "Formula hasil yang menggunakan parameter."
+      }
+    ],
+    "example": "=LAMBDA(harga,diskon,harga*(1-diskon))(150000,0.1)",
+    "result": "135000",
+    "realWorld": "Mendefinisikan fungsi harga neto berulang melalui nama workbook.",
+    "mistakes": [
+      "LAMBDA yang ditulis di sel tanpa dipanggil menghasilkan #CALC!.",
+      "Untuk dipakai ulang, simpan sebagai defined name; jumlah argumen pemanggilan harus cocok.",
+      "Excel 2021 tidak mendukung LAMBDA."
+    ],
+    "alternatives": [
+      "LET untuk satu formula",
+      "Kolom bantu"
+    ],
+    "difficulty": "Lanjutan",
+    "availability": "Microsoft 365 Windows/Mac dan Excel Web; Excel 2024 Windows/Mac. Tidak tersedia pada Excel 2021 atau lebih lama.",
+    "source": {
+      "title": "LAMBDA function — Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/excel/functions/lambda-function"
+    }
+  }
+]
