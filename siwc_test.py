@@ -23,6 +23,7 @@ APP_NAME = "Excel Lab"
 CONFIG_DIR = Path.home() / ".config" / "excel-lab"
 HOST_ID_FILE = CONFIG_DIR / "host-id"
 AUTH_FILE = CONFIG_DIR / "chatgpt-auth.json"
+PENDING_CLIENT_FILE = CONFIG_DIR / "pending-client.json"
 
 AUTH_ENDPOINT = "https://auth.openai.com/api/accounts/authorize"
 TOKEN_ENDPOINT = "https://auth.openai.com/api/accounts/oauth/token"
@@ -80,14 +81,22 @@ def get_host_id() -> str:
     return value
 
 
-def load_auth() -> dict | None:
-    if not AUTH_FILE.exists():
+def load_json_file(path: Path) -> dict | None:
+    if not path.exists():
         return None
     try:
-        data = json.loads(AUTH_FILE.read_text(encoding="utf-8"))
+        data = json.loads(path.read_text(encoding="utf-8"))
         return data if isinstance(data, dict) else None
     except (OSError, json.JSONDecodeError):
         return None
+
+
+def load_auth() -> dict | None:
+    return load_json_file(AUTH_FILE)
+
+
+def load_pending_client() -> dict | None:
+    return load_json_file(PENDING_CLIENT_FILE)
 
 
 class CallbackHandler(BaseHTTPRequestHandler):
@@ -149,7 +158,8 @@ def validate_id_token(id_token: str, client_id: str, nonce: str) -> dict:
 
 def login() -> dict:
     existing = load_auth()
-    saved_client_id = (existing or {}).get("client_id")
+    pending = load_pending_client()
+    saved_client_id = (existing or {}).get("client_id") or (pending or {}).get("client_id")
     initial_registration = not bool(saved_client_id)
     requested_client_id = "dynamic_agent_client" if initial_registration else saved_client_id
 
@@ -218,6 +228,14 @@ def login() -> dict:
         if not returned_client_id or returned_client_id == "dynamic_agent_client":
             raise RuntimeError("OpenAI tidak mengembalikan issued client_id.")
         client_id = returned_client_id
+        write_private_json(
+            PENDING_CLIENT_FILE,
+            {
+                "client_id": client_id,
+                "ext_agent_host_id": host_id,
+                "saved_at": utcnow(),
+            },
+        )
     else:
         client_id = saved_client_id
         if returned_client_id and returned_client_id != client_id:
@@ -237,6 +255,16 @@ def login() -> dict:
         timeout=30,
     )
     if not token_response.ok:
+        try:
+            error_payload = token_response.json()
+        except ValueError:
+            error_payload = {}
+        error_code = error_payload.get("error")
+        if error_code == "invalid_grant" and PENDING_CLIENT_FILE.exists():
+            raise RuntimeError(
+                "Token exchange mengembalikan invalid_grant. Issued client ID sudah disimpan. "
+                "Jalankan lagi: python siwc_test.py login"
+            )
         raise RuntimeError(
             f"Token exchange gagal ({token_response.status_code}): "
             f"{token_response.text[:500]}"
@@ -275,6 +303,10 @@ def login() -> dict:
         raise RuntimeError("Access token atau refresh token tidak tersedia.")
 
     write_private_json(AUTH_FILE, saved)
+    try:
+        PENDING_CLIENT_FILE.unlink()
+    except FileNotFoundError:
+        pass
 
     print()
     print("LOGIN CHATGPT: OK")
