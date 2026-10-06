@@ -1,9 +1,10 @@
 .env
+.venv/
 instance/
 __pycache__/
 *.pyc
 .DS_Store
-
+chatgpt-auth.json
 *.db
 *.sqlite
 *.sqlite3
